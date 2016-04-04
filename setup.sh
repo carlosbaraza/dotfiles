@@ -53,7 +53,7 @@ brew cask install charles # Proxy debugging HTTP
 brew cask install clipmenu
 brew cask install spectacle
 brew cask install the-unarchiver
-brew cask install ekitch
+brew cask install skitch
 brew cask install skype
 brew cask install vlc
 
