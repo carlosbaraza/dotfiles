@@ -37,7 +37,10 @@ brew install go
 echo "export PATH=$PATH:/usr/local/opt/go/libexec/bin" >> ~/.zshrc
 brew install svn
 
+# Install iterm2
 brew cask install iterm2
+cp ./iterm/blue.json "/Users/carlosbaraza/Library/Application Support/iTerm2/DynamicProfiles"
+
 brew cask install atom
 brew cask install google-chrome
 brew cask install firefox
