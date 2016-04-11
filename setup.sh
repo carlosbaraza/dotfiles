@@ -60,6 +60,7 @@ brew cask install the-unarchiver
 brew cask install skitch
 brew cask install skype
 brew cask install vlc
+brew cask install sourcetree
 
 # Meteor Installation
 curl https://install.meteor.com/ | sh
