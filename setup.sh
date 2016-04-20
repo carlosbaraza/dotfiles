@@ -61,6 +61,7 @@ brew cask install skitch
 brew cask install skype
 brew cask install vlc
 brew cask install sourcetree
+brew cask install robomongo
 
 # Meteor Installation
 curl https://install.meteor.com/ | sh
