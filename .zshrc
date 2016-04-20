@@ -95,3 +95,4 @@ export DOCKER_TLS_VERIFY=1
 export PATH=$PATH:$(npm root -g):./node_modules/.bin
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+eval $(thefuck --alias)
