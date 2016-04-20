@@ -69,6 +69,15 @@ curl https://install.meteor.com/ | sh
 brew install wget
 brew install cmake
 
+# Atom
+apm install docblockr
+apm install goto-definition
+apm install highlight-selected
+apm install linter
+apm install linter-eslint
+npm install -g eslint eslint-plugin-meteor
+apm install toggle-quotes
+
 # Install macvim
 brew install macvim
 brew linkapps macvim
