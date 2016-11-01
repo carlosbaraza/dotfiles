@@ -17,6 +17,7 @@ git clone https://github.com/powerline/fonts ~/powerline-fonts
 rm -rf ~/powerline-fonts
 
 # TODO: Add iterm2 profile config
+cp ~/dotfiles/iterm/blue.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/blue.json
 
 
 # GIT
