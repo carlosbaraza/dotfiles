@@ -87,10 +87,6 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/go/libex
 # QT
 export PATH=$PATH:/Users/carlosbaraza/Qt/5.5/clang_64/bin
 
-export DOCKER_HOST="tcp://192.168.99.100:2376"
-export DOCKER_CERT_PATH="/Users/carlosbaraza/.docker/machine/machines/default"
-export DOCKER_TLS_VERIFY=1
-
 # NPM
 export PATH=$PATH:$(npm root -g):./node_modules/.bin
 
