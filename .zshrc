@@ -94,5 +94,8 @@ export PATH=$PATH:$(npm root -g):./node_modules/.bin
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
+# VIM
+export VIMRUNTIME=/usr/local/Cellar/macvim/8.0-133/MacVim.app/Contents/Resources/vim/runtime/
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 eval $(thefuck --alias)
