@@ -32,6 +32,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install caskroom/cask/brew-cask
 
 brew install node
+brew install nvm
 brew install mongo
 
 # Install GO

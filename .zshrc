@@ -90,5 +90,9 @@ export PATH=$PATH:/Users/carlosbaraza/Qt/5.5/clang_64/bin
 # NPM
 export PATH=$PATH:$(npm root -g):./node_modules/.bin
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 eval $(thefuck --alias)
