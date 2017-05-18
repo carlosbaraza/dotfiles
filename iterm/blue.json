@@ -330,7 +330,7 @@
         "Red Component" : 0,
         "Blue Component" : 0.1937013864517212
       },
-      "Minimum Contrast" : 0,
+      "Minimum Contrast" : 0.5,
       "Shortcut" : "",
       "Cursor Color" : {
         "Red Component" : 0.4257335364818573,
