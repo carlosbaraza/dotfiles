@@ -93,6 +93,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# NPM
 export PATH=$PATH:$(npm root -g):./node_modules/.bin
 
 # Python3
@@ -109,3 +110,5 @@ export PATH="$PATH:/Users/carlosbaraza/anaconda3/bin"
 [[ -f /Users/carlosbaraza/.nvm/versions/node/v8.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/carlosbaraza/.nvm/versions/node/v8.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
 export PATH="/usr/local/sbin:$PATH"
+
+# eval $(thefuck --alias)

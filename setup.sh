@@ -17,6 +17,7 @@ git clone https://github.com/powerline/fonts ~/powerline-fonts
 rm -rf ~/powerline-fonts
 
 # TODO: Add iterm2 profile config
+cp ~/dotfiles/iterm/blue.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/blue.json
 
 
 # GIT
@@ -31,13 +32,18 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install caskroom/cask/brew-cask
 
 brew install node
+brew install nvm
+brew install mongo
 
 # Install GO
 brew install go
 echo "export PATH=$PATH:/usr/local/opt/go/libexec/bin" >> ~/.zshrc
 brew install svn
 
+# Install iterm2
 brew cask install iterm2
+cp ./iterm/blue.json "/Users/carlosbaraza/Library/Application Support/iTerm2/DynamicProfiles"
+
 brew cask install atom
 brew cask install google-chrome
 brew cask install firefox
@@ -56,12 +62,24 @@ brew cask install the-unarchiver
 brew cask install skitch
 brew cask install skype
 brew cask install vlc
+brew cask install sourcetree
+brew cask install robomongo
+brew cask install diffmerge
 
 # Meteor Installation
 curl https://install.meteor.com/ | sh
 
 brew install wget
 brew install cmake
+
+# Atom
+apm install docblockr
+apm install goto-definition
+apm install highlight-selected
+apm install linter
+apm install linter-eslint
+npm install -g eslint eslint-plugin-meteor
+apm install toggle-quotes
 
 # Install macvim
 brew install macvim

@@ -99,7 +99,7 @@
 [merge]
   summary = true
   verbosity = 1
-  tool = mvimdiff
+	tool = diffmerge
 [apply]
   whitespace = nowarn
 [branch]
@@ -111,7 +111,7 @@
 [core]
   autocrlf = false
   editor = vim
-  excludesfile = ~/.yadr/git/gitignore
+	excludesfile = /Users/carlosbaraza/.gitignore_global
 [advice]
   statusHints = false
 [diff]
@@ -119,6 +119,7 @@
   # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
 	algorithm = patience
+	tool = diffmerge
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
@@ -129,8 +130,13 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.2.4/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
 	name = Carlos Baraza Haro
 	email = carlos.baraza@ieee.org
+[difftool "diffmerge"]
+	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+[mergetool "diffmerge"]
+	trustExitCode = true
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
