@@ -89,9 +89,8 @@ ln -s /usr/local/opt/macvim/MacVim.app/Contents/MacOS/Vim /usr/local/bin/vi
 
 # Install vimrc (Cool vim configuration)
 # https://github.com/amix/vimrc
-git clone https://github.com/amix/vimrc.git ~/.vim_runtime
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
-rm ~/.vimrc; ln -s ~/dotfiles/.vimrc ~/.vimrc
 
 # Install vim plugins
 cd ~/.vim_runtime/sources_non_forked/
