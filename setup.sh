@@ -41,6 +41,7 @@ echo "export PATH=$PATH:/usr/local/opt/go/libexec/bin" >> ~/.zshrc
 brew install svn
 
 # Install iterm2
+brew install tmux
 brew cask install iterm2
 cp ./iterm/blue.json "/Users/carlosbaraza/Library/Application Support/iTerm2/DynamicProfiles"
 
