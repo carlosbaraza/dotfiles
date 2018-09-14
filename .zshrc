@@ -87,18 +87,34 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/go/libex
 # QT
 export PATH=$PATH:/Users/carlosbaraza/Qt/5.5/clang_64/bin
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # NPM
 export PATH=$PATH:$(npm root -g):./node_modules/.bin
-
-# Anaconda
-export PATH=/usr/local/anaconda3/bin:$PATH
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
-# VIM
-export VIMRUNTIME=/usr/local/Cellar/macvim/8.0-133/MacVim.app/Contents/Resources/vim/runtime/
+# Python3
+export PATH=$PATH:/Users/carlosbaraza/Library/Python/3.6/bin
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-eval $(thefuck --alias)
+# Anaconda
+# added by Anaconda3 4.4.0 installer
+export PATH="$PATH:/Users/carlosbaraza/anaconda3/bin"
+export PATH=/usr/local/anaconda3/bin:$PATH
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/carlosbaraza/.nvm/versions/node/v8.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/carlosbaraza/.nvm/versions/node/v8.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/carlosbaraza/.nvm/versions/node/v8.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/carlosbaraza/.nvm/versions/node/v8.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+
+export PATH="/usr/local/sbin:$PATH"
+
+# eval $(thefuck --alias)
