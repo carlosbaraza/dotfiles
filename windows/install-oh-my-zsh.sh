@@ -6,6 +6,7 @@ sudo apt-get install zsh
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 rm ~/.bashrc
 ln -s $CURRENT_DIR/.bashrc ~/.bashrc
+ln -s $CURRENT_DIR/.zshrc ~/.zshrc
 
 # Install Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
