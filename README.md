@@ -69,3 +69,16 @@ Using Hyper (with Bash):
 
 This will set up Oh My ZSH, which in my opinion is better than just pure Bash.
 
+## Install Node
+In Hyper (now ZSH)
+
+```
+./windows/install-node.sh
+```
+
+## Install Golang
+In Hyper (now ZSH)
+
+```
+./windows/install-golang.sh
+```
