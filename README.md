@@ -82,3 +82,10 @@ In Hyper (now ZSH)
 ```
 ./windows/install-golang.sh
 ```
+
+## Install Python
+In Hyper (now ZSH)
+
+```
+./windows/install-python.sh
+```
