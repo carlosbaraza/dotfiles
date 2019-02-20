@@ -38,6 +38,10 @@ and another time for the WSL:
 git config --global user.email "email@example.com"
 git config --global user.name "Carlos Baraza"
 ```
+5. Finally add github.com to `known_hosts`:
+```
+ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+```
 
 Now we configure Git for WSL:
 1. Open Hyper, which should open `bash.exe` terminal
@@ -48,6 +52,10 @@ Now we configure Git for WSL:
 ```
 git config --global user.email "email@example.com"
 git config --global user.name "Carlos Baraza"
+```
+6. Finally add github.com to `known_hosts`:
+```
+ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 ```
 
 Done, now we can use Git with GitHub
