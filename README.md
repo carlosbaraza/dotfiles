@@ -49,9 +49,9 @@ Now we configure Git for WSL:
 3. Copy `~/.ssh/id_rsa.pub`
 4. Add to permitted GitHub SSH keys in GitHub settings
 5. Configure git:
-```
-git config --global user.email "email@example.com"
-git config --global user.name "Carlos Baraza"
+```bash
+# Add my custom GitHub configuration
+./windows/link-gitconfig.sh
 ```
 6. Finally add github.com to `known_hosts`:
 ```
