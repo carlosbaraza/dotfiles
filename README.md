@@ -89,3 +89,11 @@ In Hyper (now ZSH)
 ```
 ./windows/install-python.sh
 ```
+
+## Apple Magic Keyboard mappings
+I use a Magic Keyboard to work and it was slowing me down a lot not to have the right mappings,
+at least while I get used to the Windows shortcuts. Therefore I added a script to accelerate
+the development while adapting.
+
+To use just open the `magic-keyboard.ahk` file and it will open with AutoHotkey, which was
+installed with Choco. To stop it, just close the program.
