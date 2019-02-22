@@ -13,3 +13,5 @@ choco install steam -y
 choco install virtualbox -y
 choco install git -y
 choco install geforce-experience -y
+choco install autohotkey -y
+choco install discord -y
