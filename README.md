@@ -97,3 +97,13 @@ the development while adapting.
 
 To use just open the `magic-keyboard.ahk` file and it will open with AutoHotkey, which was
 installed with Choco. To stop it, just close the program.
+
+## Setting up Deep Learning environment
+We installed `anaconda3` with `choco` and then we need to take the following steps,
+taken from [this article](https://towardsdatascience.com/python-environment-setup-for-deep-learning-on-windows-10-c373786e36d1).
+
+1. Install Geforce Experience (already done with choco)
+2. Install Cuda Toolkit 9, not available in choco :(. TF 1.13.0 adds support for Cuda 10, so you should be able to upgrade soon. -> [Manual install](https://developer.nvidia.com/cuda-90-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal)
+3. Run Sample and confirm CUDA works C:\ProgramData\NVIDIA Corporation\CUDA Samples\v9.0\1_Utilities\deviceQuery
+4. Install [cuDNN](https://developer.nvidia.com/cudnn). This library accelerates deep learning algorithms
+5. Run the `./windows/setup-anaconda.bat` using `cmd.exe`. Anaconda environments don't work in PowerShell
