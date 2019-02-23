@@ -16,4 +16,4 @@ choco install git -y
 choco install geforce-experience -y
 choco install autohotkey -y
 choco install discord -y
-choco install anaconda3 -y
+choco install anaconda3 --params '"/AddToPath"' -y
