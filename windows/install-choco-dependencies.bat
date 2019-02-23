@@ -2,6 +2,7 @@ choco install microsoft-teams -y
 choco install whatsapp -y
 choco install slack -y
 choco install openhardwaremonitor -y
+choco install hwmonitor -y
 choco install vlc -y
 choco install f.lux -y
 choco install cpu-z -y
@@ -15,3 +16,4 @@ choco install git -y
 choco install geforce-experience -y
 choco install autohotkey -y
 choco install discord -y
+choco install anaconda3 -y
