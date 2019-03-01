@@ -102,6 +102,9 @@ In Hyper (now ZSH)
 ./windows/install-python.sh
 ```
 
+## Graphical applications on WSL with XServer (MobaXterm)
+Follow the MobaXterm section of [this article](https://nickjanetakis.com/blog/using-wsl-and-mobaxterm-to-create-a-linux-dev-environment-on-windows)
+
 ## Apple Magic Keyboard mappings
 I use a Magic Keyboard to work and it was slowing me down a lot not to have the right mappings,
 at least while I get used to the Windows shortcuts. Therefore I added a script to accelerate
