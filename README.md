@@ -69,6 +69,18 @@ Using Hyper (with Bash):
 
 This will set up Oh My ZSH, which in my opinion is better than just pure Bash.
 
+## Configure VS Code
+
+Change the shell to WSL in `settings.json` (`ctrl+,` to open):
+```
+{
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+  "files.eol": "\n"
+}
+```
+It's important to change the default EOL because Windows behaves differently than most UNIX systems,
+and GIT does not like that, creating some merge conflicts and other nasty situations.
+
 ## Install Node
 In Hyper (now ZSH)
 
