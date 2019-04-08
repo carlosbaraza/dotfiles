@@ -118,3 +118,12 @@ export PATH=/usr/local/anaconda3/bin:$PATH
 export PATH="/usr/local/sbin:$PATH"
 
 # eval $(thefuck --alias)
+
+# gcloud - brew cask install google-cloud-sdk
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
+# GO
+export GO111MODULE=on # Enable modules
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin

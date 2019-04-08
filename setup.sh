@@ -66,6 +66,7 @@ brew cask install vlc
 brew cask install sourcetree
 brew cask install robomongo
 brew cask install diffmerge
+brew cask install spectacle
 
 # Meteor Installation
 curl https://install.meteor.com/ | sh
