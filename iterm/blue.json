@@ -114,7 +114,7 @@
       "Non Ascii Font" : "RobotoMonoForPowerline-Regular 12",
       "Vertical Spacing" : 1,
       "Use Bold Font" : true,
-      "Option Key Sends" : 0,
+      "Option Key Sends": 2,
       "Selected Text Color" : {
         "Red Component" : 0.05966387689113617,
         "Color Space" : "Calibrated",
