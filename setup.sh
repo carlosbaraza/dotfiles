@@ -4,8 +4,8 @@
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install theme for shell
-mkdir -p $ZSH/custom/themes/
-curl -L -o $ZSH/custom/themes/bullet-train.zsh-theme http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
+mkdir -p ~/.oh-my-zsh/custom/themes/
+curl -L -o ~/.oh-my-zsh/custom/themes/bullet-train.zsh-theme http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
 rm ~/.zshrc; ln -s ~/dotfiles/.zshrc ~/.zshrc
 
 # Add history if you want to keep the command history
@@ -37,7 +37,6 @@ brew install mongo
 
 # Install GO
 brew install go
-echo "export PATH=$PATH:/usr/local/opt/go/libexec/bin" >> ~/.zshrc
 brew install svn
 
 # Install iterm2
@@ -45,43 +44,36 @@ brew install tmux
 brew cask install iterm2
 cp ./iterm/blue.json "/Users/carlosbaraza/Library/Application Support/iTerm2/DynamicProfiles"
 
-brew cask install atom
+brew cask install visual-studio-code
 brew cask install google-chrome
 brew cask install firefox
-brew cask install chitchat # whatsapp web wrapper
 brew cask install slack
 brew cask install evernote
 brew cask install istat-menus
 brew cask install spotify
-brew cask install dockertoolbox
 brew cask install flux
 brew cask install cakebrew
 brew cask install charles # Proxy debugging HTTP
-brew cask install clipmenu
+brew cask install clipy
 brew cask install spectacle
 brew cask install the-unarchiver
 brew cask install skitch
 brew cask install skype
 brew cask install vlc
 brew cask install sourcetree
-brew cask install robomongo
+brew cask install robo-3t
 brew cask install diffmerge
-brew cask install spectacle
+brew cask install whatsapp
+brew cask install docker
+brew cask install geekbench
+brew cask install google-cloud-sdk
+brew cask install intel-power-gadget
 
 # Meteor Installation
 curl https://install.meteor.com/ | sh
 
 brew install wget
 brew install cmake
-
-# Atom
-apm install docblockr
-apm install goto-definition
-apm install highlight-selected
-apm install linter
-apm install linter-eslint
-npm install -g eslint eslint-plugin-meteor
-apm install toggle-quotes
 
 # Install macvim
 brew install macvim
