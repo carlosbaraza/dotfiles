@@ -69,6 +69,7 @@ brew cask install docker
 brew cask install geekbench
 brew cask install google-cloud-sdk
 brew cask install intel-power-gadget
+brew cask install google-backup-and-sync
 
 # Meteor Installation
 curl https://install.meteor.com/ | sh
