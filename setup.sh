@@ -16,9 +16,6 @@ git clone https://github.com/powerline/fonts ~/powerline-fonts
 ~/powerline-fonts/install.sh
 rm -rf ~/powerline-fonts
 
-# TODO: Add iterm2 profile config
-cp ~/dotfiles/iterm/blue.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/blue.json
-
 
 # GIT
 ################################################################################
@@ -43,7 +40,7 @@ brew install svn
 # Install iterm2
 brew install tmux
 brew cask install iterm2
-cp ./iterm/blue.json "/Users/carlosbaraza/Library/Application Support/iTerm2/DynamicProfiles"
+cp ~/dotfiles/iterm/profiles.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/profiles.json
 
 brew cask install visual-studio-code
 brew cask install google-chrome
