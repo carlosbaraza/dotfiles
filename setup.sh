@@ -32,6 +32,7 @@ brew install node
 brew install nvm
 brew install mongo
 brew install terraform
+brew install watchman
 
 # Install GO
 brew install go
