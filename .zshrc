@@ -129,5 +129,8 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+# Rust
+export PATH=$HOME/.cargo/bin:$PATH
+
 # Private env variables
 source ~/.env

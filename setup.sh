@@ -99,3 +99,6 @@ brew install the_silver_searcher
 # Android
 brew cask install java
 brew cask install android-studio
+
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
