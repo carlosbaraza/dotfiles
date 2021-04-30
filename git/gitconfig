@@ -140,5 +140,5 @@
 [mergetool "diffmerge"]
 	trustExitCode = true
 	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
-[url "ssh://git@github.com/"]
+[url "git@github.com:"]
 	insteadOf = https://github.com/

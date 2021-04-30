@@ -100,6 +100,28 @@ export PATH=$PATH:$(npm root -g):./node_modules/.bin
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
+# Autoload NVM when changing directories if .nvmrc is found
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
 # Python3
 export PATH=$PATH:/Users/carlosbaraza/Library/Python/3.6/bin
 
@@ -132,5 +154,16 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 # Rust
 export PATH=$HOME/.cargo/bin:$PATH
 
+# Bison
+export PATH=/usr/local/opt/bison/bin:$PATH
+
 # Private env variables
 source ~/.env
+
+export DISPLAY=:0
+
+# Android
+export PATH=~/Library/Android/sdk/platform-tools:$PATH
+
+# Init pyenv to have multiple python versions
+eval "$(pyenv init -)"
