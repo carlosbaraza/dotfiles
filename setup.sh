@@ -73,6 +73,28 @@ brew install --cask intel-power-gadget
 brew install --cask google-backup-and-sync
 brew install --cask steveschow-gfxcardstatus
 
+# https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/
+brew install dust
+brew install fd
+brew install duf
+brew install exa
+brew install ripgrep
+brew install bat
+brew install git-delta
+brew install dog
+brew install glances
+brew install sd
+brew install plocate
+brew install pdfgrep
+brew install broot
+brew install choose-rust
+brew install ctop
+brew install thefuck
+brew install rga
+brew install fzf
+brew install ldns # DNS (drill)
+
+
 # Meteor Installation
 curl https://install.meteor.com/ | sh
 
