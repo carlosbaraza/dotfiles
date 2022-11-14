@@ -5,7 +5,7 @@ export ZSH=/Users/carlosbaraza/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bullet-train"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -84,21 +84,21 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/go/libexec/bin
 
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # QT
 export PATH=$PATH:/Users/carlosbaraza/Qt/5.5/clang_64/bin
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # NPM
 export PATH=$PATH:$(npm root -g):./node_modules/.bin
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Autoload NVM when changing directories if .nvmrc is found
 autoload -U add-zsh-hook
@@ -139,11 +139,9 @@ export PATH=/usr/local/anaconda3/bin:$PATH
 
 export PATH="/usr/local/sbin:$PATH"
 
-# eval $(thefuck --alias)
-
 # gcloud - brew cask install google-cloud-sdk
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # GO
 export GO111MODULE=on # Enable modules
@@ -171,8 +169,7 @@ eval "$(pyenv init -)"
 # Deno binaries
 export PATH="/Users/carlosbaraza/.deno/bin:$PATH"
 
-source /Users/carlosbaraza/.config/broot/launcher/bash/br
-
+# source /Users/carlosbaraza/.config/broot/launcher/bash/br
 
 rga-fzf() {
 	RG_PREFIX="rga --files-with-matches"
