@@ -72,7 +72,7 @@ main() {
     brew install --cask istat-menus
     brew install --cask spotify
     brew install --cask cakebrew
-    brew install --cask clipy
+    brew install --cask alfred
     brew install --cask rectangle
     brew install --cask the-unarchiver
     brew install --cask vlc
