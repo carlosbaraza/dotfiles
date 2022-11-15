@@ -30,7 +30,13 @@ main() {
     rm -f ~/.zshrc; ln -s ~/dotfiles/.zshrc ~/.zshrc
 
     # Add history if you want to keep the command history
-    # rm -f ~/.zsh_history; ln -s ~/dotfiles/.zsh_history ~/.zsh_history
+    # mkdir -p ~/sync
+    # touch ~/.zsh_history
+    # if [ ! -f ~/sync/.zsh_history ]; then # if file not exists
+    #     cp ~/.zsh_history ~/sync/.zsh_history
+    # fi
+    # rm -f ~/.zsh_history
+    # ln -s ~/sync/.zsh_history ~/.zsh_history
 
     # Install powerline compatible fonts
     git clone https://github.com/powerline/fonts ~/powerline-fonts
@@ -66,7 +72,8 @@ main() {
     brew install --cask warp
 
     brew install --cask visual-studio-code
-    #brew install --cask google-chrome
+    brew install --cask google-chrome
+    brew install --cask chromium --no-quarantine
     brew install --cask firefox
     brew install --cask slack
     brew install --cask istat-menus

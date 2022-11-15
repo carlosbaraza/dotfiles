@@ -184,3 +184,8 @@ rga-fzf() {
 	echo "opening $file" &&
 	open "$file"
 }
+
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+# https://linguinecode.com/post/how-to-fix-m1-mac-puppeteer-chromium-arm64-bug
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
