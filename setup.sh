@@ -45,6 +45,8 @@ main() {
     rm -f ~/.zshrc; ln -s ~/dotfiles/.zshrc ~/.zshrc
     rm -f ~/.zprofile; ln -s ~/dotfiles/zprofile ~/.zprofile
     rm -f ~/.tmux.conf; ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+    mkdir -p ~/.config/ghostty
+    rm -f ~/.config/ghostty/config; ln -s ~/dotfiles/ghostty/config ~/.config/ghostty/config
 
     # GIT
     ################################################################################
@@ -88,6 +90,7 @@ main() {
 
     # Apps (casks)
     ################################################################################
+    brew install --cask ghostty
     brew install --cask warp
     brew install --cask visual-studio-code
     brew install --cask google-chrome
