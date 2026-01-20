@@ -76,12 +76,10 @@ main() {
     brew install atuin         # better shell history
     brew install the_silver_searcher  # ag search
 
-    # Vim
+    # Neovim (AstroNvim)
     brew install neovim
-    if [ ! -d ~/.vim_runtime ]; then
-        git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-        sh ~/.vim_runtime/install_awesome_vimrc.sh
-    fi
+    mkdir -p ~/.config
+    rm -f ~/.config/nvim; ln -s ~/dotfiles/nvim ~/.config/nvim
 
     # Rust
     if ! command -v rustc &> /dev/null; then

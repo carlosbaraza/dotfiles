@@ -84,6 +84,11 @@ source ~/.env
 # Aliases
 # =============================================================================
 
+# Neovim
+alias vi="nvim"
+alias vim="nvim"
+
+# Claude
 alias claude="$HOME/.claude/local/claude"
 alias c="claude --allow-dangerously-skip-permissions"
 
