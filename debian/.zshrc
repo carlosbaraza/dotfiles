@@ -41,6 +41,7 @@ command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
 # Aliases
 # =============================================================================
 
+alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
