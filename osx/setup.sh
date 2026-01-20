@@ -47,6 +47,7 @@ main() {
     rm -f ~/.tmux.conf; ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
     mkdir -p ~/.config/ghostty
     rm -f ~/.config/ghostty/config; ln -s ~/dotfiles/ghostty/config ~/.config/ghostty/config
+    rm -rf ~/.config/atuin; ln -s ~/dotfiles/atuin ~/.config/atuin
 
     # GIT
     ################################################################################

@@ -54,6 +54,7 @@ main() {
     rm -f ~/.zshrc; ln -s ~/dotfiles/debian/.zshrc ~/.zshrc
     rm -f ~/.tmux.conf; ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
     rm -f ~/.gitconfig; ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+    rm -rf ~/.config/atuin; ln -s ~/dotfiles/atuin ~/.config/atuin
 
     # Modern CLI tools (via cargo or direct download)
     ################################################################################
