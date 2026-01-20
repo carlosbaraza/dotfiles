@@ -42,7 +42,7 @@ main() {
     fi
 
     # Symlink dotfiles
-    rm -f ~/.zshrc; ln -s ~/dotfiles/.zshrc ~/.zshrc
+    rm -f ~/.zshrc; ln -s ~/dotfiles/osx/.zshrc ~/.zshrc
     rm -f ~/.zprofile; ln -s ~/dotfiles/zprofile ~/.zprofile
     rm -f ~/.tmux.conf; ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
     mkdir -p ~/.config/ghostty

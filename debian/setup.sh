@@ -8,7 +8,7 @@ if [[ "${TRACE-0}" == "1" ]]; then
 fi
 
 if [[ "${1-}" =~ ^-*h(elp)?$ ]]; then
-    echo 'Usage: ./setup-debian.sh
+    echo 'Usage: ./setup.sh
 
 Sets up dotfiles and common tools on Ubuntu/Debian.
 '
@@ -51,7 +51,7 @@ main() {
 
     # Symlink dotfiles
     ################################################################################
-    rm -f ~/.zshrc; ln -s ~/dotfiles/.zshrc ~/.zshrc
+    rm -f ~/.zshrc; ln -s ~/dotfiles/debian/.zshrc ~/.zshrc
     rm -f ~/.tmux.conf; ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
     rm -f ~/.gitconfig; ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 
