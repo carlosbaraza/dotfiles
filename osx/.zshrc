@@ -90,7 +90,7 @@ alias vi="nvim"
 alias vim="nvim"
 
 # Claude
-alias claude="$HOME/.claude/local/claude"
+alias claude="$HOME/.local/bin/claude"
 alias c="claude --allow-dangerously-skip-permissions"
 
 # =============================================================================
@@ -121,4 +121,5 @@ claude-tmux() {
 }
 
 # InPractise utilities (ip, ipa, wt)
+# source ~/dev/inpractise/.shell-utils.zsh
 source ~/dev/inpractise/.shell-utils.zsh
