@@ -21,6 +21,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Neovim (if installed to /opt)
 [ -d /opt/nvim-linux-x86_64/bin ] && export PATH="/opt/nvim-linux-x86_64/bin:$PATH"
 
+# fnm (Fast Node Manager)
+[ -d "$HOME/.local/share/fnm" ] && export PATH="$HOME/.local/share/fnm:$PATH"
+
 # =============================================================================
 # Tool Initialization (only if installed)
 # =============================================================================
@@ -30,6 +33,9 @@ command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# atuin (better shell history)
+[ -f "$HOME/.atuin/bin/env" ] && source "$HOME/.atuin/bin/env" && eval "$(atuin init zsh)"
 
 # =============================================================================
 # External Sources
