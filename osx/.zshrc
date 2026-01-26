@@ -91,7 +91,7 @@ alias vim="nvim"
 
 # Claude
 alias claude="$HOME/.local/bin/claude"
-alias c="claude --allow-dangerously-skip-permissions"
+alias c="ENABLE_TOOL_SEARCH=true claude --allow-dangerously-skip-permissions"
 
 # =============================================================================
 # Functions
@@ -123,3 +123,6 @@ claude-tmux() {
 # InPractise utilities (ip, ipa, wt)
 # source ~/dev/inpractise/.shell-utils.zsh
 source ~/dev/inpractise/.shell-utils.zsh
+
+# Local overrides (not tracked in dotfiles)
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
