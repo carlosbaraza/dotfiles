@@ -42,6 +42,7 @@ command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
 # =============================================================================
 
 [ -f ~/.env ] && source ~/.env
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # =============================================================================
 # Aliases
@@ -53,3 +54,7 @@ alias vim="nvim"
 
 # Claude (installed at ~/.local/bin/claude)
 alias c="claude --allow-dangerously-skip-permissions"
+
+# OSC52 clipboard (works over SSH)
+yank() { printf "\033]52;c;%s\a" "$(cat | base64 | tr -d '\r\n')"; }
+[[ "$OSTYPE" == linux* ]] && alias pbcopy='yank'
