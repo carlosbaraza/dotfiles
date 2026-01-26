@@ -51,6 +51,7 @@ main() {
 
     # Symlink dotfiles
     ################################################################################
+    mkdir -p ~/.config
     rm -f ~/.zshrc; ln -s ~/dotfiles/debian/.zshrc ~/.zshrc
     rm -f ~/.tmux.conf; ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
     rm -f ~/.gitconfig; ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
@@ -60,19 +61,20 @@ main() {
     ################################################################################
 
     # Install Rust
-    if ! command -v rustc &> /dev/null; then
+    if [ ! -f "$HOME/.cargo/env" ]; then
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-        source "$HOME/.cargo/env"
     fi
+    # Source cargo env for this session
+    [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
-    # Install tools via cargo
-    cargo install fd-find      # find replacement
-    cargo install ripgrep      # grep replacement
-    cargo install bat          # cat replacement
-    cargo install eza          # ls replacement
-    cargo install du-dust      # du replacement
-    cargo install sd           # sed replacement
-    cargo install zoxide       # smarter cd
+    # Install tools via cargo (only if not already installed)
+    [ ! -f "$HOME/.cargo/bin/fd" ] && cargo install fd-find       # find replacement
+    [ ! -f "$HOME/.cargo/bin/rg" ] && cargo install ripgrep       # grep replacement
+    [ ! -f "$HOME/.cargo/bin/bat" ] && cargo install bat          # cat replacement
+    [ ! -f "$HOME/.cargo/bin/eza" ] && cargo install eza          # ls replacement
+    [ ! -f "$HOME/.cargo/bin/dust" ] && cargo install du-dust     # du replacement
+    [ ! -f "$HOME/.cargo/bin/sd" ] && cargo install sd            # sed replacement
+    [ ! -f "$HOME/.cargo/bin/zoxide" ] && cargo install zoxide    # smarter cd
 
     # Install fzf
     if [ ! -d ~/.fzf ]; then
@@ -81,25 +83,26 @@ main() {
     fi
 
     # Install fnm (Fast Node Manager)
-    if ! command -v fnm &> /dev/null; then
+    if [ ! -d "$HOME/.local/share/fnm" ]; then
         curl -fsSL https://fnm.vercel.app/install | bash
     fi
 
     # Install atuin (better shell history)
-    if ! command -v atuin &> /dev/null; then
+    if [ ! -d "$HOME/.atuin" ]; then
         curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
     fi
 
     # Neovim (from GitHub releases - apt version is very outdated)
     ################################################################################
-    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
-    sudo rm -rf /opt/nvim-linux-x86_64
-    sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
-    sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
-    rm nvim-linux-x86_64.tar.gz
+    if [ ! -f /usr/local/bin/nvim ]; then
+        curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+        sudo rm -rf /opt/nvim-linux-x86_64
+        sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+        sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
+        rm nvim-linux-x86_64.tar.gz
+    fi
 
-    # AstroNvim config symlink
-    mkdir -p ~/.config
+    # Neovim config symlink
     rm -rf ~/.config/nvim; ln -s ~/dotfiles/nvim ~/.config/nvim
 
     echo "Done! Log out and back in, or run: zsh"
