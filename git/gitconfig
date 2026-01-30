@@ -111,7 +111,7 @@
   default = upstream
 [core]
   autocrlf = false
-  editor = vim
+  editor = nvim
 	excludesfile = /Users/carlosbaraza/.gitignore_global
   pager = delta
 [advice]

@@ -102,6 +102,9 @@ main() {
         rm nvim-linux-x86_64.tar.gz
     fi
 
+    # Set nvim as the default editor system-wide
+    sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/nvim 60
+
     # Neovim config symlink
     rm -rf ~/.config/nvim; ln -s ~/dotfiles/nvim ~/.config/nvim
 
