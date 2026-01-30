@@ -53,7 +53,7 @@ alias vi="nvim"
 alias vim="nvim"
 
 # Claude (installed at ~/.local/bin/claude)
-alias c="claude --allow-dangerously-skip-permissions"
+alias c="IS_SANDBOX=1 claude --allow-dangerously-skip-permissions"
 
 # OSC52 clipboard (works over SSH)
 yank() { printf "\033]52;c;%s\a" "$(cat | base64 | tr -d '\r\n')"; }
