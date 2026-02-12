@@ -7,6 +7,7 @@ return {
         -- language servers
         "lua-language-server",
         "typescript-language-server",
+        "tailwindcss-language-server",
 
         -- formatters
         "stylua",
