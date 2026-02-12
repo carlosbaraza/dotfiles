@@ -49,6 +49,10 @@ main() {
     rm -f ~/.config/ghostty/config; ln -s ~/dotfiles/ghostty/config ~/.config/ghostty/config
     rm -rf ~/.config/atuin; ln -s ~/dotfiles/atuin ~/.config/atuin
 
+    # AeroSpace
+    # NOTE: Run ~/dotfiles/aerospace/install.sh first to install dependencies
+    rm -f ~/.aerospace.toml; ln -s ~/dotfiles/aerospace/.aerospace.toml ~/.aerospace.toml
+
     # GIT
     ################################################################################
     rm -f ~/.gitconfig; ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
