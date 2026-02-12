@@ -1,3 +1,6 @@
-window-decoration = false
-window-padding-x = 0
-window-padding-y = 0
+# window-decoration = false
+macos-titlebar-style = hidden
+window-padding-x = 4
+window-padding-y = 2
+macos-window-shadow = false
+window-padding-balance = true
