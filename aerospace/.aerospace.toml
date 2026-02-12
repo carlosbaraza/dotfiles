@@ -184,6 +184,11 @@ on-mode-changed = []
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
 
+    # Passthrough mode – temporarily disables AeroSpace bindings so Option
+    # produces normal characters (e.g. # € on UK keyboards).
+    # Press alt-. to toggle in/out.
+    alt-period = 'mode passthrough'
+
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
@@ -196,3 +201,8 @@ on-mode-changed = []
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+# 'passthrough' binding mode – all keys pass through to macOS except the
+# toggle shortcut, so Option+3 = #, Option+2 = €, etc.
+[mode.passthrough.binding]
+    alt-period = 'mode main'
