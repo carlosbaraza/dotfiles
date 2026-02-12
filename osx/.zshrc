@@ -102,6 +102,9 @@ alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
+# Chrome
+chrome() { open -na "Google Chrome" --args --new-window "$@"; }
+
 # Claude
 alias claude="$HOME/.local/bin/claude"
 alias c="ENABLE_TOOL_SEARCH=true claude --allow-dangerously-skip-permissions"
