@@ -105,6 +105,9 @@ alias vim="nvim"
 # Chrome
 chrome() { open -na "Google Chrome" --args --new-window "$@"; }
 
+# AeroSpace
+alias astart="$HOME/dotfiles/aerospace/startup.sh"
+
 # Claude
 alias claude="$HOME/.local/bin/claude"
 alias c="ENABLE_TOOL_SEARCH=true claude --allow-dangerously-skip-permissions"
