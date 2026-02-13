@@ -62,9 +62,12 @@ open_and_move_all "com.anthropic.claudefordesktop" "R"
 # --- Workspace F: Linear ---
 open_and_move_all "com.linear" "F"
 
-# --- Workspace A: Messaging ---
+# --- Workspace A: Telegram ---
 open_and_move_all "com.tdesktop.Telegram" "A"
-open_and_move_all "net.whatsapp.WhatsApp" "A"
+
+# --- Workspace W: WhatsApp & Signal ---
+open_and_move_all "net.whatsapp.WhatsApp" "W"
+open_and_move_all "org.whispersystems.signal-desktop" "W"
 
 # --- Workspace C: Calendar ---
 open_and_move_all "com.apple.iCal" "C"
