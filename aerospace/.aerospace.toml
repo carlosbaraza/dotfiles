@@ -203,6 +203,11 @@ on-mode-changed = []
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
 
+# Wispr Flow: keep floating, don't tile
+[[on-window-detected]]
+if.app-id = 'com.electron.wispr-flow'
+run = 'layout floating'
+
 # 'passthrough' binding mode – all keys pass through to macOS except the
 # toggle shortcut, so Option+3 = #, Option+2 = €, etc.
 [mode.passthrough.binding]
