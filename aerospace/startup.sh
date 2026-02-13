@@ -30,45 +30,47 @@ open_and_move_all() {
       done
 }
 
-# --- Workspace B: Browser ---
-if ! app_in_workspace "com.google.Chrome" "B"; then
+# --- Workspace D: Browser ---
+if ! app_in_workspace "com.google.Chrome" "D"; then
   open -b "com.google.Chrome"
   sleep 3
   aerospace list-windows --all --format '%{window-id}|%{app-bundle-id}' 2>/dev/null \
     | grep "com.google.Chrome" \
     | cut -d'|' -f1 \
     | while read -r wid; do
-        aerospace move-node-to-workspace --window-id "$wid" "B"
+        aerospace move-node-to-workspace --window-id "$wid" "D"
       done
 fi
 
-# --- Workspace R: Home Assistant (new Chrome window) ---
-if ! app_in_workspace "com.google.Chrome" "R"; then
+# --- Workspace G: Home Assistant (new Chrome window) ---
+if ! app_in_workspace "com.google.Chrome" "G"; then
   open -na "Google Chrome" --args --new-window "https://arroyo.baraza.io"
   sleep 2
   NEW_WID=$(aerospace list-windows --all --format '%{window-id}|%{app-bundle-id}|%{workspace}' 2>/dev/null \
     | grep "com.google.Chrome" \
-    | grep -v "|B$" \
-    | grep -v "|R$" \
+    | grep -v "|D$" \
+    | grep -v "|G$" \
     | head -1 | cut -d'|' -f1)
   if [ -n "$NEW_WID" ]; then
-    aerospace move-node-to-workspace --window-id "$NEW_WID" "R"
+    aerospace move-node-to-workspace --window-id "$NEW_WID" "G"
   fi
 fi
 
-# --- Workspace C: Claude ---
-open_and_move_all "com.anthropic.claudefordesktop" "C"
+# --- Workspace R: Claude ---
+open_and_move_all "com.anthropic.claudefordesktop" "R"
 
-# --- Workspace D: Linear ---
-open_and_move_all "com.linear" "D"
+# --- Workspace F: Linear ---
+open_and_move_all "com.linear" "F"
 
 # --- Workspace M: Messaging ---
 open_and_move_all "com.tdesktop.Telegram" "M"
 open_and_move_all "net.whatsapp.WhatsApp" "M"
 
-# --- Workspace N: Calendar & Notes ---
-open_and_move_all "com.apple.iCal" "N"
-open_and_move_all "md.obsidian" "N"
+# --- Workspace C: Calendar ---
+open_and_move_all "com.apple.iCal" "C"
+
+# --- Workspace V: Obsidian ---
+open_and_move_all "md.obsidian" "V"
 
 # --- Workspace P: 1Password ---
 open_and_move_all "com.1password.1password" "P"
@@ -76,16 +78,16 @@ open_and_move_all "com.1password.1password" "P"
 # --- Workspace S: Slack ---
 open_and_move_all "com.tinyspeck.slackmacgap" "S"
 
-# --- Workspace T: Terminal (single window running tmux) ---
-if ! app_in_workspace "com.mitchellh.ghostty" "T"; then
+# --- Workspace E: Terminal (single window running tmux) ---
+if ! app_in_workspace "com.mitchellh.ghostty" "E"; then
   /Applications/Ghostty.app/Contents/MacOS/ghostty -e tmux &
   sleep 2
   WID=$(aerospace list-windows --all --format '%{window-id}|%{app-bundle-id}' 2>/dev/null \
     | grep "com.mitchellh.ghostty" | head -1 | cut -d'|' -f1)
   if [ -n "$WID" ]; then
-    aerospace move-node-to-workspace --window-id "$WID" "T"
+    aerospace move-node-to-workspace --window-id "$WID" "E"
   fi
 fi
 
-# Focus workspace T to start
-aerospace workspace T || true
+# Focus workspace E to start
+aerospace workspace E || true
