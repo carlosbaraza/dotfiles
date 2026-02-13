@@ -9,6 +9,7 @@ config-version = 2
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
     'exec-and-forget borders active_color=0xffff6600 inactive_color=0x00000000 width=5.0',
+    'exec-and-forget /Users/carlosbaraza/dotfiles/aerospace/startup.sh',
 ]
 
 # Start AeroSpace at login
