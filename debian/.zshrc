@@ -21,6 +21,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Neovim (if installed to /opt)
 [ -d /opt/nvim-linux-x86_64/bin ] && export PATH="/opt/nvim-linux-x86_64/bin:$PATH"
 
+# Default editor
+export EDITOR="nvim"
+export VISUAL="nvim"
+
 # fnm (Fast Node Manager)
 [ -d "$HOME/.local/share/fnm" ] && export PATH="$HOME/.local/share/fnm:$PATH"
 
@@ -64,3 +68,10 @@ alias c="IS_SANDBOX=1 claude --allow-dangerously-skip-permissions"
 # OSC52 clipboard (works over SSH)
 yank() { printf "\033]52;c;%s\a" "$(cat | base64 | tr -d '\r\n')"; }
 [[ "$OSTYPE" == linux* ]] && alias pbcopy='yank'
+
+# fnm
+FNM_PATH="/root/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
