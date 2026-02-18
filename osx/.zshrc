@@ -111,6 +111,7 @@ alias astart="$HOME/dotfiles/aerospace/startup.sh"
 # Claude
 alias claude="$HOME/.local/bin/claude"
 alias c="ENABLE_TOOL_SEARCH=true claude --allow-dangerously-skip-permissions"
+alias cor="env $(grep -v '^#' ~/.claude/openrouter.env | xargs) ccr code --allow-dangerously-skip-permissions"
 
 # =============================================================================
 # Functions
