@@ -66,8 +66,8 @@ on-mode-changed = []
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
-# - Constant:     gaps.outer.top = 8
-# - Per monitor:  gaps.outer.top = [{ monitor.main = 16 }, { monitor."some-pattern" = 32 }, 24]
+# - Constant:     gaps.outer.top =        4
+# - Per monitor:  gaps.outer.top =        4
 #                 In this example, 24 is a default value when there is no match.
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See:
@@ -75,10 +75,10 @@ on-mode-changed = []
 [gaps]
     inner.horizontal = 4
     inner.vertical =   4
-    outer.left =       4
-    outer.bottom =     4
-    outer.top =        4
-    outer.right =      4
+    outer.left =   [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 250 }, 4]
+    outer.bottom = [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 30 }, 4]
+    outer.top =    [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 30 }, 4]
+    outer.right =  [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 250 }, 4]
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -182,6 +182,11 @@ on-mode-changed = []
     alt-tab = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+    # Toggle zen mode (centered outer gaps for ultrawide)
+    alt-semicolon = 'exec-and-forget /Users/carlosbaraza/dotfiles/aerospace/toggle-zen-gaps.sh 900 100'
+    alt-quote = 'exec-and-forget /Users/carlosbaraza/dotfiles/aerospace/toggle-zen-gaps.sh 500 60'
+    alt-backslash = 'exec-and-forget /Users/carlosbaraza/dotfiles/aerospace/toggle-zen-gaps.sh 250 30'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
