@@ -146,3 +146,9 @@ source ~/dev/inpractise/.shell-utils.zsh
 
 # Local overrides (not tracked in dotfiles)
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# Added by Familiar — CLI path
+export PATH="$HOME/.familiar/bin:$PATH"
+
+# bun completions
+[ -s "/Users/carlosbaraza/.bun/_bun" ] && source "/Users/carlosbaraza/.bun/_bun"
