@@ -75,10 +75,10 @@ on-mode-changed = []
 [gaps]
     inner.horizontal = 4
     inner.vertical =   4
-    outer.left =   [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 250 }, 4]
-    outer.bottom = [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 30 }, 4]
-    outer.top =    [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 30 }, 4]
-    outer.right =  [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 250 }, 4]
+    outer.left =   [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 900 }, 4]
+    outer.bottom = [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 100 }, 4]
+    outer.top =    [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 100 }, 4]
+    outer.right =  [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 900 }, 4]
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
