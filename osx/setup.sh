@@ -97,7 +97,6 @@ main() {
     brew install --cask warp
     brew install --cask visual-studio-code
     brew install --cask google-chrome
-    brew install --cask chromium --no-quarantine
     brew install --cask firefox
     brew install --cask slack
     brew install --cask istat-menus
