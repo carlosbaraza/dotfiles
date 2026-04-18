@@ -1,7 +1,7 @@
--- tsgo requires lspconfig v3+ which breaks AstroNvim
--- Using ts_ls until AstroNvim updates to support new lspconfig API
+-- v6 uses vim.lsp.config; server options live under config["ts_ls"] directly
 return {
   "AstroNvim/astrolsp",
+  ---@type AstroLSPOpts
   opts = {
     servers = { "ts_ls" },
     config = {
