@@ -70,10 +70,6 @@ eval "$(atuin init zsh)"
 # iTerm2 shell integration
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
-# Google Cloud SDK
-source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-
 # Bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
@@ -152,3 +148,8 @@ export PATH="$HOME/.familiar/bin:$PATH"
 
 # bun completions
 [ -s "/Users/carlosbaraza/.bun/_bun" ] && source "/Users/carlosbaraza/.bun/_bun"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/carlosbaraza/.lmstudio/bin"
+# End of LM Studio CLI section
+
