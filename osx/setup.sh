@@ -103,12 +103,16 @@ main() {
     brew install --cask spotify
     brew install --cask alfred
     brew install --cask rectangle
+    brew install --cask thaw       # menu bar manager (Ice fork, maintained for macOS 26)
     brew install --cask the-unarchiver
     brew install --cask vlc
     brew install --cask whatsapp
-    brew install --cask docker
+    brew install --cask docker-desktop
     brew install --cask google-cloud-sdk
     brew install --cask google-drive
+    brew install --cask cleanshot
+    brew install --cask wispr-flow
+    brew install --cask lm-studio
 
     echo "Done! Restart your terminal or run: source ~/.zshrc"
 }
