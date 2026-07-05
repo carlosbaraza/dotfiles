@@ -7,6 +7,9 @@ ZSH_THEME="robbyrussell"
 # Plugins
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
+# Disable oh-my-zsh auto-updates (no prompt, no background update)
+zstyle ':omz:update' mode disabled
+
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -106,7 +109,7 @@ alias astart="$HOME/dotfiles/aerospace/startup.sh"
 
 # Claude
 alias claude="$HOME/.local/bin/claude"
-alias c="ENABLE_TOOL_SEARCH=true claude --allow-dangerously-skip-permissions"
+alias c="CLAUDE_CODE_NO_FLICKER=1 ENABLE_TOOL_SEARCH=true claude --allow-dangerously-skip-permissions"
 alias cor="env $(grep -v '^#' ~/.claude/openrouter.env | xargs) ccr code --allow-dangerously-skip-permissions"
 
 # =============================================================================
