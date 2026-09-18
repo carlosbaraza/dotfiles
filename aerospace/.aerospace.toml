@@ -9,7 +9,7 @@ config-version = 2
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
     'exec-and-forget borders active_color=0xffff6600 inactive_color=0x00000000 width=5.0',
-    'exec-and-forget /Users/carlosbaraza/dotfiles/aerospace/startup.sh',
+    # 'exec-and-forget /Users/carlosbaraza/dotfiles/aerospace/startup.sh',
 ]
 
 # Start AeroSpace at login
@@ -75,10 +75,44 @@ on-mode-changed = []
 [gaps]
     inner.horizontal = 4
     inner.vertical =   4
-    outer.left =   [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 900 }, 4]
-    outer.bottom = [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 100 }, 4]
-    outer.top =    [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 100 }, 4]
-    outer.right =  [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 900 }, 4]
+    outer.left =   [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 4 }, 4]
+    outer.bottom = [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 4 }, 4]
+    outer.top =    [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 4 }, 4]
+    outer.right =  [{ monitor.'built-in' = 4 }, { monitor.'BenQ EX3501R' = 4 }, 4]
+
+# Pin workspaces to monitors. First matching pattern wins; if none of the
+# monitors is connected, the workspace falls back to the main monitor, so
+# unplugging everything collapses all workspaces onto the laptop.
+# Desk layout: laptop (left) | BenQ ultrawide (middle) | U27G4R (right)
+# See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
+[workspace-to-monitor-force-assignment]
+    # Numbers: main work, on the ultrawide
+    1 = 'BenQ EX3501R'
+    2 = 'BenQ EX3501R'
+    3 = 'BenQ EX3501R'
+    4 = 'BenQ EX3501R'
+    5 = 'BenQ EX3501R'
+    6 = 'BenQ EX3501R'
+    7 = 'BenQ EX3501R'
+    8 = 'BenQ EX3501R'
+    9 = 'BenQ EX3501R'
+    # Letter pairs (browser etc.): right screen, else ultrawide
+    Q = ['U27G4R', 'BenQ EX3501R']
+    W = ['U27G4R', 'BenQ EX3501R']
+    E = ['U27G4R', 'BenQ EX3501R']
+    R = ['U27G4R', 'BenQ EX3501R']
+    T = ['U27G4R', 'BenQ EX3501R']
+    Y = ['U27G4R', 'BenQ EX3501R']
+    U = ['U27G4R', 'BenQ EX3501R']
+    I = ['U27G4R', 'BenQ EX3501R']
+    O = ['U27G4R', 'BenQ EX3501R']
+    # Home row: laptop screen, else right screen (clamshell)
+    A = ['built-in', 'U27G4R']
+    S = ['built-in', 'U27G4R']
+    D = ['built-in', 'U27G4R']
+    F = ['built-in', 'U27G4R']
+    G = ['built-in', 'U27G4R']
+    # Bottom row (Z X C V B N M) is deliberately unpinned
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -182,6 +216,10 @@ on-mode-changed = []
     alt-tab = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+    # New Chrome window in the focused workspace (so on the focused screen).
+    # 'open -n --new-window' avoids jumping to an existing Chrome window.
+    ctrl-alt-b = 'exec-and-forget open -na "Google Chrome" --args --new-window'
 
     # Toggle zen mode (centered outer gaps for ultrawide)
     alt-semicolon = 'exec-and-forget /Users/carlosbaraza/dotfiles/aerospace/toggle-zen-gaps.sh 900 100'
