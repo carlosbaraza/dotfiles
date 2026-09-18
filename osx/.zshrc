@@ -110,7 +110,14 @@ alias astart="$HOME/dotfiles/aerospace/startup.sh"
 # Claude
 alias claude="$HOME/.local/bin/claude"
 alias c="CLAUDE_CODE_NO_FLICKER=1 ENABLE_TOOL_SEARCH=true claude --allow-dangerously-skip-permissions"
+alias c1="c --model fable"
+alias c2="c --model opus"
+alias c3="c --model sonnet"
+alias c4="c --model haiku"
 alias cor="env $(grep -v '^#' ~/.claude/openrouter.env | xargs) ccr code --allow-dangerously-skip-permissions"
+
+# Codex
+alias cx="codex --dangerously-bypass-approvals-and-sandbox"
 
 # =============================================================================
 # Functions
@@ -156,3 +163,6 @@ export PATH="$HOME/.familiar/bin:$PATH"
 export PATH="$PATH:/Users/carlosbaraza/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+# opencode
+export PATH=/Users/carlosbaraza/.opencode/bin:$PATH
