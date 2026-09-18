@@ -159,3 +159,5 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[safe]
+	directory = /Users/carlosbaraza/dyad-apps/*
