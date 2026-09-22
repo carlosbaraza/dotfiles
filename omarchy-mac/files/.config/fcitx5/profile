@@ -1,0 +1,17 @@
+[Groups/0]
+# Group Name
+Name=Default
+# Layout
+Default Layout=gb-mac
+# Default Input Method
+DefaultIM=keyboard-gb-mac
+
+[Groups/0/Items/0]
+# Name
+Name=keyboard-gb-mac
+# Layout
+# Layout=
+
+[GroupOrder]
+0=Default
+

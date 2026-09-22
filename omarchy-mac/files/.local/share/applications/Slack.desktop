@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Slack
+Comment=Open Slack workspace in a standalone browser window
+Exec=omarchy-launch-webapp "https://app.slack.com/client/TE0KN4258/CE0EM6L04"
+Terminal=false
+Type=Application
+Icon=slack
+StartupNotify=true

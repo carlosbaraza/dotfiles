@@ -1,0 +1,6 @@
+# MacBook Pro 16-inch: 64 physical notch rows / 1.75 display scale.
+# Explicit calibration avoids the shell's larger fallback at fractional scale.
+[bar]
+notch-height = 37
+size-horizontal = 37
+scale-with-font = false

@@ -1,0 +1,5 @@
+# Local editor and macOS metadata, not project build outputs.
+.DS_Store
+*.swp
+*.swo
+*~

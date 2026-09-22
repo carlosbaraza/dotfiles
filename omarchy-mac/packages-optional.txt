@@ -1,0 +1,13 @@
+# Review individually; these are not installed by install-terminal.sh.
+# Small tools from the Debian setup / Mac shell:
+dust
+sd
+ripgrep-all
+# Use only if switching away from mise for Node:
+fnm
+# Language runtimes / version managers from the Mac shell:
+pyenv
+go
+rustup
+bun
+deno

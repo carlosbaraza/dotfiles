@@ -1,0 +1,3 @@
+# GNOME Calendar and standalone Google account setup for Hyprland
+gnome-calendar
+gnome-online-accounts-gtk

@@ -1,0 +1,6 @@
+__pycache__/
+files/.env
+files/.zshrc.local
+files/.config/atuin/key
+files/.config/atuin/session
+*.swp

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Move the current tmux window into its own session and open it in Ghostty.
+set -euo pipefail
+socket=$(tmux display-message -p '#{socket_path}')
+source_window=$(tmux display-message -p '#{session_id}:#{window_index}')
+window=$(tmux display-message -p '#{window_id}')
+name=$(tmux display-message -p '#{window_name}')
+safe_name=$(printf '%s' "$name" | tr -c '[:alnum:]_-' '-')
+[ -n "$safe_name" ] || safe_name=detached
+if tmux has-session -t "=$safe_name" 2>/dev/null; then
+  safe_name="${safe_name}-$(date +%s)-$$"
+fi
+tmux new-session -d -s "$safe_name"
+tmux link-window -k -s "$window" -t "${safe_name}:1"
+tmux unlink-window -t "$source_window"
+ghostty -e tmux -S "$socket" attach-session -t "=$safe_name" >/dev/null 2>&1 &

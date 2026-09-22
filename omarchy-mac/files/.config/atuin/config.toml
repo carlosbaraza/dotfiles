@@ -1,0 +1,9 @@
+# Adapted from ../../../../atuin/config.toml in this repository.
+filter_mode = "global"
+filter_mode_shell_up_key_binding = "session"
+enter_accept = true
+# Option+numbers belong to Hyprland desktops; use Ctrl+numbers in search.
+ctrl_n_shortcuts = true
+
+[sync]
+records = true

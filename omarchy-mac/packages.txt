@@ -1,0 +1,14 @@
+# Core terminal setup (Arch Linux ARM package names).
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+atuin
+fzf
+zoxide
+ripgrep
+fd
+bat
+eza
+tmux
+neovim
+wl-clipboard
